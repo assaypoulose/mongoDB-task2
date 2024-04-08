@@ -1,0 +1,210 @@
+test> show databases;
+Products    72.00 KiB
+University  72.00 KiB
+admin       40.00 KiB
+config      72.00 KiB
+local       72.00 KiB
+test> use ZenClassZenClass> db.users.insertMany([
+...     {
+...         user_id: 1,
+...         name: "Assay",
+...         email: "assay@gmail.com",
+...     },
+...     {
+...         user_id: 2,
+...         name: "Sooraj",
+...         email: "sooraj@gmail.com",
+...     },
+...     {
+...         user_id: 3,
+...         name: "Babu",
+...         email: "babu@gmail.com",
+...     },
+...     {
+...         user_id: 4,
+...         name: "Sajitha",
+...         email: "sajitha@gmail.com",
+...     },
+... ]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6613ce1902e1f76cda476e58'),
+    '1': ObjectId('6613ce1902e1f76cda476e59'),
+    '2': ObjectId('6613ce1902e1f76cda476e5a'),
+    '3': ObjectId('6613ce1902e1f76cda476e5b')
+  }
+}
+ZenClass> db.codekata.insertMany([
+...     {
+...         user_id: 1,
+...         codekata_title: "Basics",
+...         codekata_problems: 40,
+...     },
+...     {
+...         user_id: 2,
+...         codekata_title: "Strings",
+...         codekata_problems: 17,
+...     },
+...     {
+...         user_id: 3,
+...         codekata_title: "Array",
+...         codekata_problems: 25,
+...     },
+...     {
+...         user_id: 4,
+...         codekata_title: "Input/Output",
+...         codekata_problems: 38,
+...     },
+... ]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6613ce6402e1f76cda476e5c'),
+    '1': ObjectId('6613ce6402e1f76cda476e5d'),
+    '2': ObjectId('6613ce6402e1f76cda476e5e'),
+    '3': ObjectId('6613ce6402e1f76cda476e5f')
+  }
+}
+ZenClass> db.attendance.insertMany([
+...     {
+...         user_id: 1,
+...         topic_id: 1,
+...         present: false,
+...     },
+... 
+...     {
+...         user_id: 2,
+...         topic_id: 2,
+...         present: true,
+...     },
+...     {
+...         user_id: 3,
+...         topic_id: 3,
+...         present: false,
+...     },
+...     {
+...         user_id: 4,
+...         topic_id: 4,
+...         present: true,
+...     },
+... ]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6613d35f02e1f76cda476e60'),
+    '1': ObjectId('6613d35f02e1f76cda476e61'),
+    '2': ObjectId('6613d35f02e1f76cda476e62'),
+    '3': ObjectId('6613d35f02e1f76cda476e63')
+  }
+}
+ZenClass> db.topics.insertMany([
+...     {
+...         topic_id: 1,
+...         topic: "React",
+...         topic_created: new Date("2024-01-15"),
+...     },
+...     {
+...         topic_id: 2,
+...         topic: "MongoDB",
+...         topic_created: new Date("2024-01-25"),
+...     },
+...     {
+...         topic_id: 3,
+...         topic: "Nodejs",
+...         topic_created: new Date("2024-02-05"),
+...     },
+...     {
+...         topic_id: 4,
+...         topic: "ExpressJS",
+...         topic_created: new Date("2024-02-17"),
+...     },
+... ]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6613d3da02e1f76cda476e64'),
+    '1': ObjectId('6613d3da02e1f76cda476e65'),
+    '2': ObjectId('6613d3da02e1f76cda476e66'),
+    '3': ObjectId('6613d3da02e1f76cda476e67')
+  }
+}
+ZenClass> db.tasks.insertMany([
+...     {
+...         topic_id: 1,
+...         topic: "HTML",
+...         topic_date: new Date("2024-01-07"),
+...         submitted: false,
+...     },
+...     {
+...         topic_id: 2,
+...         topic: "CSS",
+...         topic_date: new Date("2024-01-11"),
+...         submitted: true,
+...     },
+...     {
+...         topic_id: 3,
+...         topic: "Javascript",
+...         topic_date: new Date("2024-01-26"),
+...         submitted: false,
+...     },
+...     {
+...         topic_id: 4,
+...         topic: "Array",
+...         topic_date: new Date("2024-02-16"),
+...         submitted: true,
+...     },
+... ]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6613d44702e1f76cda476e68'),
+    '1': ObjectId('6613d44702e1f76cda476e69'),
+    '2': ObjectId('6613d44702e1f76cda476e6a'),
+    '3': ObjectId('6613d44702e1f76cda476e6b')
+  }
+}
+ZenClass> db.mentors.insertMany([
+...     {
+...         mentor_id: 1,
+...         mentor_name: "Mohan",
+...         mentor_email: "mohan@gmail.com",
+...         class_count: 20,
+...     },
+...     {
+...         mentor_id: 2,
+...         mentor_name: "AkbarBasha",
+...         mentor_email: "akbar@gmail.com",
+...         class_count: 10,
+...     },
+...     {
+...         mentor_id: 3,
+...         mentor_name: "Ragavkumar",
+...         mentor_email: "ragav@gmail.com",
+...         class_count: 50,
+...     },
+...     {
+...         mentor_id: 4,
+...         mentor_name: "Rajavasanth",
+...         mentor_email: "rajavasanth@gmail.com",
+...         class_count: 50,
+...     },
+... ]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6613d45602e1f76cda476e6c'),
+    '1': ObjectId('6613d45602e1f76cda476e6d'),
+    '2': ObjectId('6613d45602e1f76cda476e6e'),
+    '3': ObjectId('6613d45602e1f76cda476e6f')
+  }
+}
+ZenClass> show collections;
+attendance
+codekata
+mentors
+tasks
+topics
+users
+ZenClass> 
+
